@@ -7,6 +7,7 @@ user_object = User()
 order_object = Order()
 
 app = Flask (__name__, instance_relative_config=True)
+app.config['ENV'] = 'development'
 app.config.from_object('config')
 app.config.from_pyfile('config.py')
 
